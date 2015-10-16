@@ -1,6 +1,7 @@
-package groovy.com.espoc.config
+package com.espoc.config
 
 import grails.util.Holders
+import groovy.util.logging.Log4j
 import org.elasticsearch.client.transport.TransportClient
 import org.elasticsearch.common.settings.ImmutableSettings
 import org.elasticsearch.common.transport.InetSocketTransportAddress
@@ -10,8 +11,9 @@ import org.springframework.data.elasticsearch.core.ElasticsearchOperations
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories
 
+@Log4j
 @Configuration
-@EnableElasticsearchRepositories(basePackages = ["com.as.core.repositories"])
+@EnableElasticsearchRepositories(basePackages = ["com.espoc.repositories"])
 class ElasticSearchConfig {
 
     @Bean

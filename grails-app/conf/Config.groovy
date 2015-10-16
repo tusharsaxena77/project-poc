@@ -93,7 +93,7 @@ environments {
             elasticsearch {
                 transportClientIP = "localhost"
                 transportClientPort = 9300
-                clusterName = "elasticsearch"
+                clusterName = "espoc"
             }
         }
     }
