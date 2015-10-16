@@ -88,8 +88,16 @@ grails.hibernate.osiv.readonly = false
 
 environments {
     development {
-        grails.logging.jul.usebridge = true
+        grails {
+            serverURL = "http://localhost:8080/american-swan"
+            elasticsearch {
+                transportClientIP = "localhost"
+                transportClientPort = 9300
+                clusterName = "elasticsearch"
+            }
+        }
     }
+
     production {
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
